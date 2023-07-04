@@ -1,35 +1,36 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'montseratt', sans-serif;
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.app{
+.app {
   background-image: url('./assets/cold-bg.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4s ease-out;
 }
-.app.warm{
+
+.app.warm {
   background-image: url('./assets/warm-bg.jpg');
 }
 
-main{
+main {
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0, 0.75));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
   padding: 25px;
 }
 
-.search-box{
+.search-box {
   width: 100%;
   margin: 0 0 75px;
 }
 
-.search-box .search-bar{
+.search-box .search-bar {
   display: block;
   width: 100%;
   padding: 15px;
@@ -39,11 +40,11 @@ main{
   border: none;
   outline: none;
 
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0px 0px 16px 16px;
   margin-top: -25px;
 
-  box-shadow: 8px 5px rgba(0,0,0, 0.2);
+  box-shadow: 8px 5px rgba(0, 0, 0, 0.2);
 
   color: #313131;
   font-size: 20px;
@@ -51,52 +52,116 @@ main{
   transition: 0.4s ease;
 }
 
-.search-box .search-bar:focus{
-  background-color: rgba(255,255,255, 0.75);
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
-.location-box .location{
+.unit-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.unit-toggle label {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 18px;
+}
+
+.unit-toggle input[type="radio"] {
+  display: none;
+}
+
+.unit-toggle input[type="radio"] + span {
+  padding-left: 5px;
+}
+
+.unit-toggle input[type="radio"] + span::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  margin-right: 5px;
+}
+
+.unit-toggle input[type="radio"]:checked + span::before {
+  background-color: #FFF;
+}
+
+.location-box .location {
   color: #FFF;
   font-size: 32px;
   font-weight: 500;
   text-align: center;
-  text-shadow: 3px 3px rgba(50,50,70,0.5);
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
-.location-box .date{
+.location-box .date {
   color: #FFF;
   font-size: 20px;
   font-weight: 300;
   font-style: italic;
   text-align: center;
-  text-shadow: 2px 2px rgba(50,50,70,0.5);
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 }
 
 .weather-box {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .weather-box .temp {
   position: relative;
   display: inline-block;
   margin: 30px auto;
-  background-color: rgba(255,255,255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-
   padding: 15px 25px;
-
   color: #FFF;
   font-size: 102px;
   font-weight: 900;
-
-  text-shadow: 3px 6px rgba(50,50,70,0.5);
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
   text-align: center;
-  box-shadow: 3px 6px rgba(0,0,0,0.2);
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .weather-box .weather {
   color: #FFF;
   font-size: 48px;
   font-weight: 700;
-  text-shadow: 3px 3px rgba(50,50,70,0.5);
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #FFF;
+}
+
+.forecast .forecast-item {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  color: #FFF;
+  font-size: 16px;
+}
+
+.extra-info {
+  margin-top: 30px;
+  color: #FFF;
+  font-size: 16px;
+  text-align: center;
+}
+
+.extra-info div {
+  margin-bottom: 10px;
 }
